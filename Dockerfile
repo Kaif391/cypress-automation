@@ -14,4 +14,4 @@ RUN git clone https://github.com/Kaif391/cypress-automation.git.
 RUN npm install
 
 # Run Cypress tests
-CMD ["npx", "cypress", "run"]
+CMD ["npx", "cypress", "run", "--browser", "chrome"]
