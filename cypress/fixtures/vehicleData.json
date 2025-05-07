@@ -1,0 +1,27 @@
+{
+    "email": "qatradex@gmail.com",
+    "password": "1234567",
+    "vin": "JTLKT324054023753",
+    "color": "Black",
+    "interiorColor": "Beige",
+    "nbseats": "12",
+    "transmission": "Automatic",
+    "engine": "engine",
+    "fuel": "Gas",
+    "odometer": "12",
+    "tpms": "Yes",
+    "drivetrain": "AWD",
+    "bodyType": "Sedan",
+    "steeringPosition": "Right",
+    "exteriorDamages":"No",
+    "tiresCondition": "Flat",
+    "history": "Taxi",
+    "titleStatus": "None",
+    "soldAsIs": "No",
+    "alterations": "No",
+    "nbKeys": "5",
+    "auctionType": "Available now",
+    "image": "download1.jpg",
+    "reserve":"132"
+  }
+  

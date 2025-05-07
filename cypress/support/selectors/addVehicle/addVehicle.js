@@ -1,0 +1,40 @@
+export const ADD_VEHICLE_SELECTORS ={
+    ADD_BUTTON : 'Add Vehicle',
+    VIN_INPUT : 'input[id="vin"]',
+    VALIDATE_BUTTON : '#VinValidate',
+    EXTERIOR_COLOR : '#color button',
+    INTERIOR_COLOR : '#interiorColor button',
+    NUMBER_OF_SEATS: '#nbseats',
+    TRANSMISSION_BUTTON :"#transmission button",
+    ENGINE : '#engine',
+    FUEL_BUTTON: "#fuel button",
+    ODOMETER: '#odometer',
+    TPMS_BUTTON: "#tpms button",
+    DRIVETRAIN_BUTTON: '#drivetrain button',
+    BODY_TYPE: '#bodyType button',
+    STEERING_POSITION:'#steeringPosition button',
+    FEATURES:'#optionAC',
+    ROLE_TAB:'[role="tab"]',
+    EXTERIOR_DAMAGE:'#externalDamages',
+    INTERIOR_DAMAGE:'#internalDamages',
+    STRUCTURAL_DAMAGES:"#structuralDamages",
+    MECHANICAL_DAMAGES:"#mechanicalIssues",
+    TIRES_POSTITION:['Left Front', 'Left Rear', 'Right Front', 'Right Rear'],
+    DROPZONE:".dropzone",
+    LABEL:"label",
+    LAW_BRANDING:'#lawBranding',
+    BUTTON:"button",
+    SOLD_AD_IS:"#soldAsIs",
+    ALTERATION:"#alterations",
+    NB_KEYS:'input[id="\'nbKeys\'"]',
+    AUCTION_TYPE:"Auction type",
+    AVAILABLE_NOW:"Available now",
+    RESERVE:'input[id="reserve"]',
+    PRIMARY_BUTTON:'button.btn.btn-primary',
+    SAVE:'Save',
+    INPUT:'input'
+
+
+
+
+}
