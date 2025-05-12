@@ -4,6 +4,7 @@ const fs = require("fs");
 const cheerio = require("cheerio");
 const path = require("path");
 const puppeteer = require("puppeteer");
+require('dotenv').config();
 
 console.log("🚀 Running Cypress tests...");
 
