@@ -1,8 +1,8 @@
 name: Send Report Every 15 Minutes
 
 on:
-  schedule:
-    - cron: '*/15 * * * *'  # Every 15 minutes (UTC)
+#   schedule:
+#     - cron: '*/15 * * * *'  # Every 15 minutes (UTC)
   workflow_dispatch:         # Optional: manual run button in GitHub UI
 
 jobs:
