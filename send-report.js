@@ -36,7 +36,9 @@ exec("npm run test", (testErr, testStdout, testStderr) => {
 
     // Async function to extract the pass/fail count and send the email
     (async () => {
-      const browser = await puppeteer.launch();
+      const browser = await puppeteer.launch({
+        args: ['--no-sandbox', '--disable-setuid-sandbox'],
+      });
       const page = await browser.newPage();
     
       const filePath = `file:${path.resolve(__dirname, "cypress/reports/mochawesome/index.html")}`;
