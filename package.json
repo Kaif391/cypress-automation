@@ -6,12 +6,17 @@
   "scripts": {
     "cypress:open": "cypress open --browser chrome",
     "cypress:run": "cypress run --browser chrome --headed",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cypress run --browser chrome",
+    "send-email": "node send-report.js",
+    "test:with-email": "npm run test && npm run send-email"
   },
   "author": "kaif zaidi",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^13.15.0"
+    "cheerio": "^1.0.0",
+    "cypress": "^13.15.0",
+    "nodemailer": "^7.0.2",
+    "puppeteer": "^24.8.2"
   },
   "devDependencies": {
     "cypress-file-upload": "^5.0.8",

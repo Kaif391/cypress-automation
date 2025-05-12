@@ -17,11 +17,13 @@ describe('bidAvailableNow',()=>{
       cy.contains('Available Now', { timeout: 20000 }).should('be.visible').click();
   
         cy.wait(10000)
-        cy.get(BID_SELECTORS.PRIMARY_BG_BUTTON).eq(1).click();
-        cy.contains('p', BID_SELECTORS.AMOUNT_TEXT_PLACEHOLDER)        
-            .parent()                            
-            .find(ADD_VEHICLE_SELECTORS.INPUT)                        
-            .type(BID_SELECTORS.AMOUNT);   
+        // cy.get(BID_SELECTORS.PRIMARY_BG_BUTTON).eq(1).click();
+        cy.contains('button', 'Bid').first().click();
+        // cy.contains('p', BID_SELECTORS.AMOUNT_TEXT_PLACEHOLDER)        
+        //     .parent()                            
+        //     .find(ADD_VEHICLE_SELECTORS.INPUT)                        
+        //     .type(BID_SELECTORS.AMOUNT);   
+        cy.get('input[placeholder="Amount"]').clear().type(BID_SELECTORS.AMOUNT);
             cy.get(BID_SELECTORS.PIN_PLACEHOLDER).then(($el) => {
                 if ($el.length) {
                   cy.wrap($el).type(pin);

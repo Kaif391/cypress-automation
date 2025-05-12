@@ -14,11 +14,12 @@ describe("bidAppraisal", () => {
       cy.get(Login_SELECTORS.PASSWORD_INPUT).type(password);
       cy.get(Login_SELECTORS.LOGIN_BUTTON).click();
         cy.wait(10000)
-        cy.get(BID_SELECTORS.PRIMARY_BG_BUTTON).eq(1).click();
-        cy.contains('p', BID_SELECTORS.AMOUNT_TEXT_PLACEHOLDER)       
-            .parent()                             
-            .find(ADD_VEHICLE_SELECTORS.INPUT)                       
-            .type(BID_SELECTORS.AMOUNT);   
+        cy.contains('button', 'Bid').eq(3).click();
+        // cy.contains('p', BID_SELECTORS.AMOUNT_TEXT_PLACEHOLDER)       
+        //     .parent()                             
+        //     .find(ADD_VEHICLE_SELECTORS.INPUT)                       
+        //     .type(BID_SELECTORS.AMOUNT);  
+        cy.get('input[placeholder="Enter your amount"]').type(BID_SELECTORS.AMOUNT); 
             cy.get(BID_SELECTORS.PIN_PLACEHOLDER).then(($el) => {
                 if ($el.length) {
                   cy.wrap($el).type(pin);

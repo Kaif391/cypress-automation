@@ -33,6 +33,8 @@ module.exports = defineConfig({
       embeddedScreenshots: true,
       inlineAssets: true,
       json: true,
+      overwrite: true,
+      html:true,
       reportDir: 'cypress/reports/mochawesome' // ✅ Add this
     }
     
