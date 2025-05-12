@@ -1,0 +1,25 @@
+name: Send Report Every 15 Minutes
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'  # Every 15 minutes (UTC)
+  workflow_dispatch:         # Optional: manual run button in GitHub UI
+
+jobs:
+  send-report:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run send-report script
+        run: node send-report.js
