@@ -16,6 +16,7 @@ exec("npm run test", (testErr, testStdout, testStderr) => {
   }
 
   console.log("🌐 Deploying report to Netlify...");
+  console.log(process.env.NETLIFY_PERSONAL_ACCESS_TOKEN,"dmd",process.env.NETLIFY_SITE_ID);
   exec(`netlify deploy --auth=${process.env.NETLIFY_PERSONAL_ACCESS_TOKEN} --site=${process.env.NETLIFY_SITE_ID} --prod --dir=cypress/reports/mochawesome --json`, (deployErr, deployStdout, deployStderr) => {
     if (deployErr) {
       console.error("❌ Deployment failed:\n", deployStderr);
