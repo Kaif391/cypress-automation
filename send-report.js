@@ -16,7 +16,7 @@ exec("npm run test", (testErr, testStdout, testStderr) => {
   }
 
   console.log("🌐 Deploying report to Netlify...");
-  exec("netlify deploy --prod --dir=cypress/reports/mochawesome --json", (deployErr, deployStdout, deployStderr) => {
+  exec(`netlify deploy --auth=${process.env.NETLIFY_PERSONAL_ACCESS_TOKEN} --site=${process.env.NETLIFY_SITE_ID} --prod --dir=cypress/reports/mochawesome --json`, (deployErr, deployStdout, deployStderr) => {
     if (deployErr) {
       console.error("❌ Deployment failed:\n", deployStderr);
       return;
@@ -63,7 +63,7 @@ exec("npm run test", (testErr, testStdout, testStderr) => {
         service: "gmail",
         auth: {
           user: "mohammed.kaif@iesoftek.com",
-          pass: "ntzg xkrz dthw rjeh", // 🔐 Consider using environment variables for security!
+          pass: process.env.GMAIL_APP_PASSWORD, // 🔐 Consider using environment variables for security!
         },
       });
 
