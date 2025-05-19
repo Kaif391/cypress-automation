@@ -53,4 +53,4 @@ ENV NETLIFY_PERSONAL_ACCESS_TOKEN=nfp_fbVNmzpfvN3DmauSSEWZVFePpW5Y86Nj67b3
 ENV GMAIL_APP_PASSWORD="ntzg xkrz dthw rjeh"
 ENV NETLIFY_SITE_ID=215bf957-4cc4-4f7c-b747-76f1c8999189
 # Default command — keep container alive so you can exec into it
-CMD ["tail", "-f", "/dev/null"]
+CMD ["node","send-report.js"]
