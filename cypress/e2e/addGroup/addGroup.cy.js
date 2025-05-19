@@ -1,4 +1,5 @@
 import { Login_SELECTORS } from '../../support/selectors/login/loginPage';
+import 'cypress-wait-until';
 const email = Cypress.env('email');
 const password = Cypress.env('password');
 describe("add group", () => {
@@ -6,6 +7,14 @@ describe("add group", () => {
         cy.visit(
             "/"
         );
+        // cy.waitUntil(() =>
+        //     cy.get(Login_SELECTORS.EMAIL_INPUT).then($el => Cypress.dom.isVisible($el)),
+        //     {
+        //         timeout: 10000,
+        //         interval: 500,
+        //         errorMsg: 'Email input never became visible',
+        //     }
+        // );
         cy.get(Login_SELECTORS.EMAIL_INPUT).type(email);
         cy.get(Login_SELECTORS.PASSWORD_INPUT).type(password);
         cy.get(Login_SELECTORS.LOGIN_BUTTON).click();
