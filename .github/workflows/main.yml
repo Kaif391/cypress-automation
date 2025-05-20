@@ -7,8 +7,8 @@ on:
 
   workflow_dispatch:  # Manual trigger
 
-  schedule:           # ⏰ Add this block
-    - cron: '*/15 * * * *'  # Runs every 15 minutes (UTC)
+  # schedule:           # ⏰ Add this block
+  #   - cron: '*/15 * * * *'  # Runs every 15 minutes (UTC)
 
 jobs:
   build-and-run:
