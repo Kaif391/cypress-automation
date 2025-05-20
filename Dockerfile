@@ -49,8 +49,9 @@ RUN npm install -g netlify-cli
 
 # Set environment for production mode (non-sensitive)
 ENV NODE_ENV=production
-ENV NETLIFY_PERSONAL_ACCESS_TOKEN=nfp_fbVNmzpfvN3DmauSSEWZVFePpW5Y86Nj67b3
+ENV NETLIFY_PERSONAL_ACCESS_TOKEN=nfp_Se7PYAR2Ey5DY8JKyUrSuHdn6Z5VcEYp170e
 ENV GMAIL_APP_PASSWORD="ntzg xkrz dthw rjeh"
-ENV NETLIFY_SITE_ID=215bf957-4cc4-4f7c-b747-76f1c8999189
+ENV NETLIFY_SITE_ID=b443ef39-9937-4afc-828c-bda9c3e54b6e
 # Default command — keep container alive so you can exec into it
-CMD ["node","send-report.js"]
+# CMD ["node","send-report.js"]
+CMD ["tail", "-f", "/dev/null"]
